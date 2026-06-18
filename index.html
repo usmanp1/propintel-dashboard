@@ -515,7 +515,8 @@ function formatDaysLeft(l){
 
 
 // Currency formatter
-function f$(n){if(!n||isNaN(n))return '—';return '$'+Number(n).toLocaleString('en-US',{maximumFractionDigits:0});}
+var fmtUSD = function(n){if(!n||isNaN(n))return '—';return '$'+Number(n).toLocaleString('en-US',{maximumFractionDigits:0})};
+var f$ = fmtUSD;
 // ── PROPINTEL v4 helpers ──────────────────────────────────────────────
 var _TODAY=new Date();_TODAY.setHours(0,0,0,0);
 function _pd(l){
